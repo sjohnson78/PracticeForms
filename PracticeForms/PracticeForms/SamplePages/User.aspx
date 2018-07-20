@@ -193,9 +193,13 @@
         <%-- need the P tag around the buttons to fix formatting, not sure how it works, ask Don --%>
         <p>
             <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
-            <asp:Button ID="Clear" runat="server" Text="Clear" OnClick="Clear_Click" />
+            <asp:Button ID="Clear" runat="server" Text="Clear" OnClick="Clear_Click" CausesValidation="false"/>
         </p>
         <%--use this label as a makeshift webgrid, to see if buttons are working--%>
         <asp:Label ID="Message" runat="server" Text="This text will change to a crazy long list of values from the text fields"></asp:Label>
+        
+
+
+
     </div>
 </asp:Content>
