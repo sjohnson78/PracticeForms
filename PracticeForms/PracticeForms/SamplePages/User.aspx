@@ -11,10 +11,80 @@
                 Please fill in the form below and click submit. 
                 After submitting the form, you will receive an email with a link to confirm your registration. 
                 By clicking on that link, you will complete the registration process.
-            </p>
+            </p>          
         </div>
     </div>
+
+    <%-- VALIDATION --%>
+    <asp:RequiredFieldValidator ID="FirstNameRequiredField" 
+        runat="server" 
+        ErrorMessage="First name is required." 
+        ControlToValidate="FirstName" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick"
+        Display="None"></asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="LastNameRequiredField" 
+        runat="server" 
+        ErrorMessage="Last name is required." 
+        ControlToValidate="LastName" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick"
+        Display="None"></asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="UserNameRequiredField" 
+        runat="server" 
+        ErrorMessage="User name is required." 
+        ControlToValidate="UserName" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick"
+        Display="None"></asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="EmailAddressRequiredField" 
+        runat="server" 
+        ErrorMessage="Email address is required." 
+        ControlToValidate="EmailAddress" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick"
+        Display="None"></asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="ConfirmEmailRequiredField" 
+        runat="server" 
+        ErrorMessage="Confirm Email is required." 
+        ControlToValidate="ConfirmEmail" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick"
+        Display="None"></asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="PasswordRequiredField" 
+        runat="server" 
+        ErrorMessage="Adam you dumb northside fuck, thats the wrong password!!!!" 
+        ControlToValidate="Password" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick"
+        Display="None"></asp:RequiredFieldValidator>
+
+    <asp:RequiredFieldValidator ID="ConfirmPasswordRequiredField" 
+        runat="server" 
+        ErrorMessage="Confirm Password is required." 
+        ControlToValidate="ConfirmPassword" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick"
+        Display="None"></asp:RequiredFieldValidator>
+
+
+
+    <div class="row">
+        <asp:ValidationSummary ID="ValidationSummary1" 
+        runat="server" 
+        HeaderText="Correct the following concerns and resubmit:" 
+        CssClass="alert alert-danger"/> 
+    </div>
+
     <br />
+
+    <%-- FORM --%>
+
     <div class="grid-form">
         <%-- label: text is the text in the label, assiciatedcontrolID should be the id of the text box that the label is for--%>
 
@@ -33,8 +103,8 @@
         <asp:Label ID="Label3" runat="server" Text="Email Address" AssociatedControlID="EmailAddress"></asp:Label>
         <asp:TextBox ID="EmailAddress" runat="server" ToolTip="Email Address" MaxLength="100"></asp:TextBox>
 
-        <asp:Label ID="Label4" runat="server" Text="Confirm Email" AssociatedControlID="EmailConfirm"></asp:Label>
-        <asp:TextBox ID="EmailConfirm" runat="server" ToolTip="Confirm Email" MaxLength="100"></asp:TextBox>
+        <asp:Label ID="Label4" runat="server" Text="Confirm Email" AssociatedControlID="ConfirmEmail"></asp:Label>
+        <asp:TextBox ID="ConfirmEmail" runat="server" ToolTip="Confirm Email" MaxLength="100"></asp:TextBox>
                 
         <asp:Label ID="Label6" runat="server" Text="Password" AssociatedControlID="Password"></asp:Label>
         <asp:TextBox ID="Password" runat="server" ToolTip="Password" MaxLength="50"></asp:TextBox>
@@ -49,8 +119,12 @@
         <%-- tip for buttons, after you drag the button from the toolbox and set the ID and Text, you can open design/split and double click the button
                 this will automatically add an OnClick property here, as well as add a matching object in the aspx.cs  --%>
 
-        <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
-
-        <asp:Button ID="Clear" runat="server" Text="Clear" OnClick="Clear_Click" />
+        <%-- need the P tag around the buttons to fix formatting, not sure how it works, ask Don --%>
+        <p>
+            <asp:Button ID="Submit" runat="server" Text="Submit" OnClick="Submit_Click" />
+            <asp:Button ID="Clear" runat="server" Text="Clear" OnClick="Clear_Click" />
+        </p>
+        <%--use this label as a makeshift webgrid, to see if buttons are working--%>
+        <asp:Label ID="Message" runat="server" Text="This text will change to a crazy long list of values from the text fields"></asp:Label>
     </div>
 </asp:Content>
