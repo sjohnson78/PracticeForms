@@ -46,7 +46,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">PracticeForms</a> <%--change this one to change top left text--%>
                 </div>
                 <div class="navbar-collapse collapse">
                     <%--comment the code below out, better to setup a Web.sitemap and link to it--%>
@@ -59,7 +59,14 @@
                     <%-- the code below links to Web.sitemap --%>
                     <%-- to add a Web.sitemap, right click the webapp folder, add, sitemap (keep name default) --%>
                     <asp:Menu ID="Menu1" runat="server"
-                         DataSourceID="SiteMapNav"></asp:Menu>
+                         DataSourceID="SiteMapNav" 
+                         Orientation="Horizontal"
+                         StaticDisplayLevels="1"
+                         StaticMenuStyle-CssClass="nav navbar-nav"
+                         StaticSelectedStyle-CssClass="active"
+                         DynamicMenuStyle-CssClass="dropdown-menu"
+                         IncludeStyleBlock="false" EnableTheming="false"
+                         EnableViewState="false"></asp:Menu>
                     <asp:SiteMapDataSource ID="SiteMapNav" runat="server" 
                          ShowStartingNode="false"/>
 

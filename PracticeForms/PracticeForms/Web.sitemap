@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
   <siteMapNode url="" title=""  description="root node (THIS WILL BE IGNORED)">
-    <siteMapNode url="~/Defaultt" title="Home"  description="" />
-    <siteMapNode url="" title="Sample Pages"  description=""> <!--a sitemap node with opening and closing tags will create a drop down list-->
-      <siteMapNode url="" title=""  description="" /> <!-- a sitemap node that has the closing "/" within the opening tag is a dropdown list item (or just a menu bar item)-->
+    <siteMapNode url="~/Default" title="Home"  description="" />
+    <siteMapNode url="" title="Samples"  description=""> <!--a sitemap node with opening and closing tags will create a drop down list-->
+      <siteMapNode url="~/SamplePages/User.aspx" title="User"  description="" /> <!-- a sitemap node that has the closing "/" within the opening tag is a dropdown list item (or just a menu bar item)-->
     </siteMapNode>
     <siteMapNode url="~/About" title="About"  description="" />
     <siteMapNode url="~/Contact" title="Contact"  description="" />
