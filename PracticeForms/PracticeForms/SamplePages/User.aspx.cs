@@ -13,5 +13,15 @@ namespace PracticeForms.SamplePages
         {
 
         }
+
+        protected void Submit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Clear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
