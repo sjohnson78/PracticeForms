@@ -47,6 +47,31 @@
         SetFocusOnError="true" 
         ForeColor="Firebrick"
         Display="None"></asp:RequiredFieldValidator>
+    <asp:RegularExpressionValidator ID="EmailAddressRegularExpression" 
+        runat="server" 
+        ErrorMessage="Email formatting incorrect, please use (xxxx@xxxx.xx)"
+        ControlToValidate="EmailAddress" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick" 
+        Display="None" 
+        ValidationExpression="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+        ></asp:RegularExpressionValidator>
+    <%-- get this email validation expression from emailregex.com --%>
+
+
+    <%-- the code below has a REGEX for phone numbers --%>
+
+    <%--<asp:RegularExpressionValidator ID="EmailAddressRegularExpression" 
+        runat="server" 
+        ErrorMessage="ENTER A PHONE NUMBER"
+        ControlToValidate="EmailAddress" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick" 
+        Display="None" 
+        ValidationExpression="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})$"
+        ></asp:RegularExpressionValidator>--%>
+
+    
 
     <asp:RequiredFieldValidator ID="ConfirmEmailRequiredField" 
         runat="server" 
@@ -54,15 +79,43 @@
         ControlToValidate="ConfirmEmail" 
         SetFocusOnError="true" 
         ForeColor="Firebrick"
-        Display="None"></asp:RequiredFieldValidator>
+        Display="None"></asp:RequiredFieldValidator>    
+    <asp:RegularExpressionValidator ID="ConfirmEmailRegularExpression" 
+        runat="server" 
+        ErrorMessage="CONFIRMED Email formatting incorrect, please use (xxxx@xxxx.xx)"
+        ControlToValidate="ConfirmEmail" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick" 
+        Display="None" 
+        ValidationExpression="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+        ></asp:RegularExpressionValidator>
+    <asp:CompareValidator ID="ConfirmEmailCompare"
+        runat="server" 
+        ErrorMessage="Email addresses must match" 
+        ControlToValidate="ConfirmEmail" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick" 
+        Display="None" 
+        Operator="Equal" 
+        ControlToCompare="EmailAddress"></asp:CompareValidator>
 
     <asp:RequiredFieldValidator ID="PasswordRequiredField" 
         runat="server" 
-        ErrorMessage="Adam you dumb northside fuck, thats the wrong password!!!!" 
+        ErrorMessage="Password is required." 
         ControlToValidate="Password" 
         SetFocusOnError="true" 
         ForeColor="Firebrick"
         Display="None"></asp:RequiredFieldValidator>
+    <asp:RegularExpressionValidator ID="PasswordRegularExpression" 
+        runat="server" 
+        ErrorMessage="Password must be between 4 and 8 digits long and include at least one numeric digit."
+        ControlToValidate="Password" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick" 
+        Display="None" 
+        ValidationExpression="^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$"
+        ></asp:RegularExpressionValidator>
+    <%-- regex above is for password 48- characters containing one number --%>
 
     <asp:RequiredFieldValidator ID="ConfirmPasswordRequiredField" 
         runat="server" 
@@ -71,6 +124,24 @@
         SetFocusOnError="true" 
         ForeColor="Firebrick"
         Display="None"></asp:RequiredFieldValidator>
+    <asp:RegularExpressionValidator ID="ConfirmPasswordRegularExpression" 
+        runat="server" 
+        ErrorMessage="CONFIRMED Password must be between 4 and 8 digits long and include at least one numeric digit."
+        ControlToValidate="ConfirmPassword" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick" 
+        Display="None" 
+        ValidationExpression="^(?=.*\d)(?=.*[a-zA-Z]).{4,8}$"
+        ></asp:RegularExpressionValidator>
+    <asp:CompareValidator ID="ConfirmPasswordCompare"
+        runat="server" 
+        ErrorMessage="Passwords must match." 
+        ControlToValidate="ConfirmPassword" 
+        SetFocusOnError="true" 
+        ForeColor="Firebrick" 
+        Display="None" 
+        Operator="Equal" 
+        ControlToCompare="Password"></asp:CompareValidator>
 
 
 

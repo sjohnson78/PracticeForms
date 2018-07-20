@@ -49,6 +49,15 @@ namespace PracticeForms.SamplePages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailAddressRequiredField;
         
         /// <summary>
+        /// EmailAddressRegularExpression control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailAddressRegularExpression;
+        
+        /// <summary>
         /// ConfirmEmailRequiredField control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,24 @@ namespace PracticeForms.SamplePages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ConfirmEmailRequiredField;
+        
+        /// <summary>
+        /// ConfirmEmailRegularExpression control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ConfirmEmailRegularExpression;
+        
+        /// <summary>
+        /// ConfirmEmailCompare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator ConfirmEmailCompare;
         
         /// <summary>
         /// PasswordRequiredField control.
@@ -67,6 +94,15 @@ namespace PracticeForms.SamplePages {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator PasswordRequiredField;
         
         /// <summary>
+        /// PasswordRegularExpression control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PasswordRegularExpression;
+        
+        /// <summary>
         /// ConfirmPasswordRequiredField control.
         /// </summary>
         /// <remarks>
@@ -74,6 +110,24 @@ namespace PracticeForms.SamplePages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ConfirmPasswordRequiredField;
+        
+        /// <summary>
+        /// ConfirmPasswordRegularExpression control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator ConfirmPasswordRegularExpression;
+        
+        /// <summary>
+        /// ConfirmPasswordCompare control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator ConfirmPasswordCompare;
         
         /// <summary>
         /// ValidationSummary1 control.
