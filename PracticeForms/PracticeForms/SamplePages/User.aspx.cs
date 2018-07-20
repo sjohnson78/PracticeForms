@@ -47,8 +47,8 @@ namespace PracticeForms.SamplePages
                     // attach the collection of entries to the GridView control
                     // we need to create the GridView in the .aspx page first.
 
-                    UserRegistrations.DataSource = userRegistrations; // userRegistrations is the name of the List<T> we created above
-                    UserRegistrations.DataBind();
+                    UsersGrid.DataSource = userRegistrations; // userRegistrations is the name of the List<T> we created above
+                    UsersGrid.DataBind();
 
 
                 }

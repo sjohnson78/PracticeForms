@@ -198,8 +198,7 @@
         <%--use this label as a makeshift webgrid, to see if buttons are working--%>
         <asp:Label ID="Message" runat="server" Text="This text will change to a crazy long list of values from the text fields"></asp:Label>
         
-
-
+        <asp:GridView ID="UsersGrid" runat="server"></asp:GridView>
 
     </div>
 </asp:Content>
